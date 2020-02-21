@@ -11,9 +11,13 @@
 // make eventListner function to assign that todoInput to the ul
 var addButton = document.getElementById('add-button');
 
-//assign the parent element to which we will be appending the new child list item
+// assign the parent element to which we will be appending the new child list item
 var ulContainer = document.getElementById('todo-list');
 
+
+
+
+// event listener function to do the magic when button is clicked
 addButton.addEventListener('click',function(){
     // make a variable to store the input text from input box
     var todoInput = document.getElementById('description').value;
@@ -23,4 +27,23 @@ addButton.addEventListener('click',function(){
     newLI.innerHTML = todoInput;
     // do the work of appending the new li to the parent ul
     ulContainer.appendChild(newLI);
+
+    newLI.addEventListener('click',function() {
+        newLI.style.textDecoration = 'line-through';
+    })
 })
+
+//var newToDos = document.querySelectorAll('li');
+
+
+
+
+//newToDos.addEventListener('click',function() {
+    //for (var i = 0; i < newToDos.length; i++)
+    //newToDos[i].style.textDecoration = 'strikethrough';
+//})
+//newLI.addEventListener('click',function() { 
+    //newLI.style.textDecoration = 'strikethrough';
+
+//}
+
