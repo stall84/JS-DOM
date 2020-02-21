@@ -7,14 +7,20 @@
 */
 
 
-// make a variable to store the input text from input box
-
-var todoInput = document.getElementById('description');
 
 // make eventListner function to assign that todoInput to the ul
-
 var addButton = document.getElementById('add-button');
 
+//assign the parent element to which we will be appending the new child list item
+var ulContainer = document.getElementById('todo-list');
+
 addButton.addEventListener('click',function(){
-    
+    // make a variable to store the input text from input box
+    var todoInput = document.getElementById('description').value;
+    // create variable that will create the new list item
+    var newLI = document.createElement('li');
+    // allocate the text inputed by user to the new list item
+    newLI.innerHTML = todoInput;
+    // do the work of appending the new li to the parent ul
+    ulContainer.appendChild(newLI);
 })
