@@ -5,3 +5,16 @@
     BONUS) Add a functioning "delete" button to each task (HINT: use the keyword "this" in your delete button's click listener! Console log "this" to see what value it holds)
     SUPER BONUS) Make each task editable
 */
+
+
+// make a variable to store the input text from input box
+
+var todoInput = document.getElementById('description');
+
+// make eventListner function to assign that todoInput to the ul
+
+var addButton = document.getElementById('add-button');
+
+addButton.addEventListener('click',function(){
+    
+})
